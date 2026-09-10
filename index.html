@@ -1557,15 +1557,20 @@
       fileNameEl.classList.add('show');
       dropZone.classList.add('has-file');
       btnProcess.disabled = false;
+      // بدء عملية المعالجة تلقائياً بعد اكتمال اختيار أو إفلات الملف
+      startProcessing();
+    }
+
+    function startProcessing() {
+      if (!selectedFile) return;
+      loading.classList.add('show');
+      setTimeout(() => {
+        processFile(selectedFile);
+      }, 800);
     }
 
     btnProcess.addEventListener('click', () => {
-      if (!selectedFile) return;
-      loading.classList.add('show');
-      // Simulate AI processing delay for premium feel
-      setTimeout(() => {
-        processFile(selectedFile);
-      }, 1800);
+      startProcessing();
     });
 
     function parseNum(s) {
