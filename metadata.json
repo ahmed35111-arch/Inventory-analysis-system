@@ -1,0 +1,8 @@
+{
+  "name": "نظام تحليل جرد مخازن الفرع",
+  "description": "نظام تحليل جرد مخازن الفرع ولوحة تحكم ذكية لتقارير العجز والفائض والتصنيفات",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
